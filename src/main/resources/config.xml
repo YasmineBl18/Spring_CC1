@@ -3,12 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="dao" class="dao.DaoImpl"></bean>
+    <bean id="d" class="ext.DaoImplV2"></bean>
     <bean id="metier" class="metier.MetierImpl">
         <!-- Injection via le setter -->
-        <property name="dao" ref="dao"></property>
-        <!-- Injection via le constructeur -->
-        <constructor-arg ref="dao"></constructor-arg>
+        <constructor-arg ref="d"></constructor-arg>
     </bean>
 
 
