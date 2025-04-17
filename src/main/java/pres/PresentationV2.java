@@ -19,7 +19,6 @@ public class PresentationV2 {
             Scanner scanner = new Scanner(new File("config.txt"));
             //DaoImpl d = new DaoImpl();
             String daoClassname = scanner.nextLine();
-
             Class cDao = Class.forName(daoClassname); //instance dynamique
             IDao dao = (IDao) cDao.getConstructor().newInstance();
 
